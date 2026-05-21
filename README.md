@@ -1,13 +1,14 @@
 # SQL Project Repository
 
-Repositorio del proyecto clínica, del grupo 7 del curso de Base de Datos I, usando MySQL.
+Repositorio del proyecto clínica usando MySQL.
+Grupo 7 del curso de Base de Datos I.
 
-## Carpetas (database_clinica/database)
+## Explicación de las subcarpetas de la carpeta database
 
-- consultas: consultas SQL (SELECT, UPDATE, DELETE)
-- esquemas: creación de tablas y estructura
-- inserciones: datos de prueba
-- diagramas: modelo entidad-relación
+- consultas: consultas SQL (SELECT, UPDATE, DELETE, operadores y clausulas, y JOINs)
+- esquemas: creación de tablas y estructura (CREATE, ALTER, DROP TABLE ...)
+- inserciones: datos de prueba (INSERT ...)
+- diagramas: modelo entidad-relación (Crow's foot) - No implementado aún
 
 ## Tecnologías
 
