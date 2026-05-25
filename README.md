@@ -8,7 +8,12 @@ Grupo 7 del curso de Base de Datos I.
 - consultas: consultas SQL (SELECT, UPDATE, DELETE, operadores y clausulas, y JOINs)
 - esquemas: creación de tablas y estructura (CREATE, ALTER, DROP TABLE ...)
 - inserciones: datos de prueba (INSERT ...)
-- diagramas: modelo entidad-relación (Crow's foot) - No implementado aún
+- diagramas: modelo entidad-relación (Crow's foot) y modelo lógico - NUEVA IMPLEMENTACIÓN
+
+## Nuevas actualizaciones
+### Actualización 1 (25/05/2026)
+- Carpeta diagramas tiene nuevos archivos, el modelo entidad relación y el lógico.
+- Se han agregado comentarios explicativos en los scripts de la carpeta consultas.
 
 ## Tecnologías
 
