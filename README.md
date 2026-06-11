@@ -3,12 +3,18 @@
 Repositorio del proyecto clínica usando MySQL.
 Grupo 7 del curso de Base de Datos I.
 
+## Avances Cumplidos
+- [X] Avance 1
+- [X] Avance 2
+- [] Avance 3
+- [] Avance Final
+
 ## Explicación de las subcarpetas de la carpeta database
 
-- consultas: consultas SQL (SELECT, UPDATE, DELETE, operadores y clausulas, y JOINs)
-- esquemas: creación de tablas y estructura (CREATE, ALTER, DROP TABLE ...)
-- inserciones: datos de prueba (INSERT ...)
-- diagramas: modelo entidad-relación (Crow's foot), modelo lógico y diccionario de datos - NUEVA IMPLEMENTACIÓN
+- 1_diagramas: modelo entidad-relación (Crow's foot), modelo lógico y diccionario de datos - NUEVA IMPLEMENTACIÓN
+- 2_esquemas: creación de tablas y estructura (CREATE, ALTER, DROP TABLE ...)
+- 3_inserciones: datos de prueba (INSERT ...)
+- 4_consultas: consultas SQL (SELECT, UPDATE, DELETE, operadores y clausulas, y JOINs)
 
 ## Nuevas actualizaciones
 ### Actualización 1 (25/05/2026)
@@ -17,6 +23,11 @@ Grupo 7 del curso de Base de Datos I.
 
 ### Actualización 2 (25/05/2026)
 - Se agregó el diccionario de datos del proyecto
+
+### Actualización 3 (11/06/2026)
+- Se realizó la corrección de la tabla cita, agregándole el campo id_especialidad
+- Se hicieron modificaciones en los registros (en la parte del INSERT)
+- Se agregó los comandos de la semana 11 y 12
 
 ## Tecnologías
 
