@@ -6,8 +6,8 @@ Grupo 7 del curso de Base de Datos I.
 ## Avances Cumplidos
 - [X] Avance 1
 - [X] Avance 2
-- [] Avance 3
-- [] Avance Final
+- [ ] Avance 3
+- [ ] Avance Final
 
 ## Explicación de las subcarpetas de la carpeta database
 
