@@ -1,12 +1,14 @@
+
 /*BASE DE DATOS - CLÍNICA */
+
 CREATE DATABASE clinica_db;
 
 USE clinica_db;
 
-/* ------ CREACIÓN DE LAS TABLAS ------*/
+
 CREATE TABLE paciente (
 	id_paciente INT AUTO_INCREMENT PRIMARY KEY,
-	codigo_paciente VARCHAR(20) UNIQUE NOT NULL,
+	codigo_paciente VARCHAR(25) UNIQUE NOT NULL,
 	dni CHAR (8) UNIQUE NOT NULL,
 	nombres VARCHAR (100) NOT NULL,
 	apellidos VARCHAR (100) NOT NULL,
@@ -96,6 +98,7 @@ CREATE TABLE cita (
 	id_medico INT NOT NULL,
 	id_recepcionista INT NOT NULL,
 	id_consultorio INT NOT NULL,
+    id_especialidad INT NOT NULL,
 	fecha DATE NOT NULL,
 	hora TIME NOT NULL,
 	tipo_cita ENUM('CONSULTA GENERAL','CONTROL','CHEQUEO','TERAPIA') NOT NULL DEFAULT 'CONSULTA GENERAL',
@@ -108,12 +111,13 @@ CREATE TABLE cita (
 	FOREIGN KEY (id_paciente) REFERENCES paciente(id_paciente),
 	FOREIGN KEY (id_medico) REFERENCES medico(id_medico),
 	FOREIGN KEY (id_recepcionista) REFERENCES recepcionista(id_recepcionista),
-	FOREIGN KEY (id_consultorio) REFERENCES consultorio(id_consultorio)
+	FOREIGN KEY (id_consultorio) REFERENCES consultorio(id_consultorio),
+    FOREIGN KEY (id_especialidad) REFERENCES especialidad(id_especialidad)
 );
 
 CREATE TABLE boleta_venta (
 	id_boleta_venta INT AUTO_INCREMENT PRIMARY KEY,
-	id_cita INT NOT NULL,
+	id_cita INT UNIQUE NOT NULL,
 	id_clinica INT NOT NULL,
 	numero_boleta VARCHAR(30) UNIQUE NOT NULL,
 	fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -135,4 +139,9 @@ CREATE TABLE detalle_boleta (
 	precio_neto DECIMAL(10,2) NOT NULL ,
 	
 	FOREIGN KEY (id_boleta_venta) REFERENCES boleta_venta (id_boleta_venta)
+);
+
+CREATE TABLE metodo_pago (
+	id_metodo_pago INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_metodo_pago VARCHAR(50) NOT NULL
 );

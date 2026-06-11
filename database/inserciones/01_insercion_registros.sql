@@ -1,6 +1,6 @@
-/* ------ REGISTRO DE TODOS LOS DATOS ------*/
 
--- Inserción de PACIENTES
+/*-------------COMANDO DML (INSERT)----------*/
+
 INSERT INTO paciente (codigo_paciente, dni, nombres, apellidos, tipo_sangre, fecha_nacimiento, genero_nacimiento, direccion_cliente, telefono)
 VALUES  ('PAC001','48392017','Juan Alberto','Pérez Mendoza','A+','1990-05-10','M','Av. Siempre Viva 123','942 120 725'),
 		('PAC002','71645829','Maria Fernanda','Lopez Ramirez','A+','2000-08-15','F','Av Lima 456','945 218 763'),
@@ -23,12 +23,12 @@ VALUES  ('PAC001','48392017','Juan Alberto','Pérez Mendoza','A+','1990-05-10','
 		('PAC019','74821530','Diego Sebastian','Herrera Cruz','B+','1997-04-04','M','Jr Moquegua 112','922 145 367'),
 		('PAC020','51937628','Elena Maribel','Ramos Delgado','AB-','2000-06-30','F','Av Primavera 777','911 874 563');
 	    
--- Inserción de MÉDICOS
+
 INSERT INTO medico (codigo_medico,dni, nombres, apellidos, telefono, correo, turno, hora_inicio, hora_fin)
 VALUES 
 		-- Medicina Interna
 		('MED001','48613248','María','Gómez Prado','925413682','mariagomezprado@ricardopalma.com','Mañana','06:00:00','14:00:00'),
-		('MED002','41396825','Luis Fernando','Garcia Ramos','981364275','luisgarciaramos@ricardopalma.com','Tarde','14:00:00','22:00:00'),
+		('MED002','41396825','Luis Fernando','Garcia Ramos','981364275','luisgarciaramos@ricardopalma.com','Mañana','06:00:00','14:00:00'),
 		('MED003','79421638','Miguel Angel','Torres Flores','956214873','migueltorresflores@ricardopalma.com','Noche','22:00:00','06:00:00'),
 		('MED004','26853197','Javier Enrique','Salas Romero','989475216','javiersalasromero@ricardopalma.com','Mañana','06:00:00','14:00:00'),
 		('MED005','93168452','Fernando Jose','Ruiz Herrera','943218675','fernandoruizherrera@ricardopalma.com','Tarde','14:00:00','22:00:00'),
@@ -63,7 +63,6 @@ VALUES
         ('MED023','72653412','Laura Luna','Espinoza Ramos','912112384','lauraespinoza@ricardopalma.com','Tarde','14:00:00','22:00:00'),
 		('MED024','65398879','Pedro Leonel','Alvarez Torres','941178231','pedroalvarez@ricardopalma.com','Noche','22:00:00','06:00:00');
 
--- Inserción de ESPECIALIDADES
 INSERT INTO especialidad (nombre_especialidad,descripcion,estado)
 VALUES
 		('MEDICINA INTERNA','Diagnóstico y tratamiento de enfermedades internas','Activo'),
@@ -77,7 +76,6 @@ VALUES
 		('PSIQUIATRIA','Salud mental','Activo');
 
 
--- Inserción de MÉDICOS CON SUS ESPECIALIDADES
 INSERT INTO medico_especialidad (id_medico,id_especialidad)
 VALUES
 		(1,1),(2,1),(3,1),(4,1),(5,1),(6,1),
@@ -88,14 +86,12 @@ VALUES
 		(19,6),(20,6),(21,6);
 
 
--- Inserción de SEDES
 INSERT INTO clinica (ruc,razon_social,distrito_ubicado,direccion_clinica,telefono,correo)
 VALUES
 		('20100121809','Administradora Clinica RICARDO PALMA S.A.','San Isidro','Av. Salaverry 1200','01 455 6677','sedeSanIsidro@ricardopalma.com'),
 		('20100121809','Administradora Clinica RICARDO PALMA S.A.','Chorrillos','Av. Larco 850','01 488 9922','sedeChorrillos@ricardopalma.com');
 
 
--- Inserción de CONSULTORIOS  (FOREING_KEY)
 INSERT INTO consultorio (id_especialidad,nombre_consultorio,numero_sala,piso)
 VALUES
 		(1,'Consultorio Medicina Interna A',101,1),
@@ -111,7 +107,6 @@ VALUES
 		(2,'Consultorio Pediatria C',502,5);
         
 
--- Inserción de RECEPCIONISTAS 
 INSERT INTO recepcionista (codigo_recepcionista, dni, nombres, apellidos, telefono, correo)
 VALUES
 		('RECEP001','84257136','Lucia Fernanda','Ramirez Torres','987 452 163','luciaramireztorres@ricardopalma.com'),
@@ -119,40 +114,44 @@ VALUES
 		('RECEP003','79624153','Fernando Alonso','Torres Vega','978 364 125','fernandotorresvega@ricardopalma.com'),
 		('RECEP004','52874196','Paola Cristina','Castillo Rios','943 625 781','paolacastillorios@ricardopalma.com');
         
--- Inserción de CITAS (FOREING_KEY)
-INSERT INTO cita (id_paciente,id_medico,id_recepcionista,id_consultorio,fecha,hora,tipo_cita,duracion_minutos,estado_cita)
+INSERT INTO cita (id_paciente,id_medico,id_recepcionista,id_consultorio,id_especialidad,fecha,hora,tipo_cita,duracion_minutos,estado_cita)
 VALUES
-		(1,1,1,1,'2026-05-20','08:00:00','CONSULTA GENERAL',30,'Pendiente'),
-		(2,2,2,1,'2026-05-20','15:00:00','CONTROL',45,'Pendiente'),
-		(3,3,3,1,'2026-05-20','22:30:00','TERAPIA',90,'Pendiente'),
-		(4,4,4,2,'2026-05-21','09:00:00','CONSULTA GENERAL',30,'Pendiente'),
-		(5,5,1,2,'2026-05-21','16:00:00','CHEQUEO',45,'Pendiente'),
-		(6,6,2,2,'2026-05-21','23:00:00','TERAPIA',90,'Pendiente'),
-		(7,7,3,3,'2026-05-22','08:30:00','CONSULTA GENERAL',30,'Pendiente'),
-		(8,8,4,4,'2026-05-22','15:30:00','CONTROL',45,'Pendiente'),
-		(9,9,1,4,'2026-05-22','10:00:00','CONSULTA GENERAL',30,'Pendiente'),
-		(10,10,2,4,'2026-05-22','22:15:00','TERAPIA',90,'Pendiente'),
-		(11,11,3,5,'2026-05-23','08:00:00','CONSULTA GENERAL',30,'Pendiente'),
-		(12,12,4,5,'2026-05-23','14:30:00','CONTROL',45,'Pendiente'),
-		(13,13,1,6,'2026-05-23','09:30:00','CONSULTA GENERAL',30,'Pendiente'),
-		(14,14,2,6,'2026-05-23','16:30:00','CHEQUEO',45,'Pendiente'),
-		(15,15,3,7,'2026-05-23','22:00:00','TERAPIA',90,'Pendiente'),
-		(16,16,4,7,'2026-05-24','07:30:00','CONSULTA GENERAL',30,'Pendiente'),
-		(17,17,1,8,'2026-05-24','15:00:00','CONTROL',45,'Pendiente'),
-		(18,18,2,8,'2026-05-24','08:45:00','CONTROL',45,'Pendiente'),
-		(19,19,3,9,'2026-05-24','10:15:00','CONSULTA GENERAL',30,'Pendiente'),
-		(20,20,4,9,'2026-05-24','17:00:00','CONSULTA GENERAL',30,'Pendiente'),
-		(1,21,1,9,'2026-05-25','23:30:00','CHEQUEO',45,'Pendiente'),
-		(2,1,2,10,'2026-05-25','06:30:00','CONSULTA GENERAL',30,'Pendiente'),
-		(3,2,3,10,'2026-05-25','15:30:00','CONTROL',45,'Pendiente'),
-		(4,3,4,10,'2026-05-25','22:45:00','TERAPIA',90,'Pendiente'),
-		(5,4,1,11,'2026-05-26','09:15:00','CONSULTA GENERAL',30,'Pendiente'),
-		(6,5,2,11,'2026-05-26','16:15:00','CONSULTA GENERAL',30,'Pendiente'),
-		(7,6,3,1,'2026-05-26','23:15:00','TERAPIA',90,'Pendiente'),
-		(8,7,4,3,'2026-05-26','07:45:00','CONTROL',45,'Pendiente');     
+		(1,1,1,1,1,'2026-05-20','08:00:00','CONSULTA GENERAL',30,'Pendiente'),
+		(2,2,2,1,1,'2026-05-20','15:00:00','CONTROL',45,'Pendiente'),
+		(3,3,3,1,1,'2026-05-20','22:30:00','TERAPIA',90,'Pendiente'),
+		(4,4,4,2,1,'2026-05-21','09:00:00','CONSULTA GENERAL',30,'Pendiente'),
+		(5,5,1,2,1,'2026-05-21','16:00:00','CHEQUEO',45,'Pendiente'),
+		(6,6,2,2,1,'2026-05-21','23:00:00','TERAPIA',90,'Pendiente'),
+        
+		(7,7,3,3,2,'2026-05-22','08:30:00','CONSULTA GENERAL',30,'Pendiente'),
+		(8,8,4,4,2,'2026-05-22','15:30:00','CONTROL',45,'Pendiente'),
+		(9,9,1,4,2,'2026-05-22','10:00:00','CONSULTA GENERAL',30,'Pendiente'),
+		(10,10,2,4,2,'2026-05-22','22:15:00','TERAPIA',90,'Pendiente'),
+        
+		(11,11,3,5,3,'2026-05-23','08:00:00','CONSULTA GENERAL',30,'Pendiente'),
+		(12,12,4,5,3,'2026-05-23','14:30:00','CONTROL',45,'Pendiente'),
+        
+		(13,13,1,6,4,'2026-05-23','09:30:00','CONSULTA GENERAL',30,'Pendiente'),
+		(14,14,2,6,4,'2026-05-23','16:30:00','CHEQUEO',45,'Pendiente'),
+		(15,15,3,7,4,'2026-05-23','22:00:00','TERAPIA',90,'Pendiente'),
+		(16,16,4,7,4,'2026-05-24','07:30:00','CONSULTA GENERAL',30,'Pendiente'),
+        
+		(17,17,1,8,5,'2026-05-24','15:00:00','CONTROL',45,'Pendiente'),
+		(18,18,2,8,5,'2026-05-24','08:45:00','CONTROL',45,'Pendiente'),
+        
+		(19,19,3,9,6,'2026-05-24','10:15:00','CONSULTA GENERAL',30,'Pendiente'),
+		(20,20,4,9,6,'2026-05-24','17:00:00','CONSULTA GENERAL',30,'Pendiente'),
+		(1,21,1,9,6,'2026-05-25','23:30:00','CHEQUEO',45,'Pendiente'),
+        
+		(2,1,2,10,1,'2026-05-25','06:30:00','CONSULTA GENERAL',30,'Pendiente'),
+		(3,2,3,10,1,'2026-05-25','15:30:00','CONTROL',45,'Pendiente'),
+		(4,3,4,10,1,'2026-05-25','22:45:00','TERAPIA',90,'Pendiente'),
+		(5,4,1,11,1,'2026-05-26','09:15:00','CONSULTA GENERAL',30,'Pendiente'),
+		(6,5,2,11,1,'2026-05-26','16:15:00','CONSULTA GENERAL',30,'Pendiente'),
+		(7,6,3,1,1,'2026-05-26','23:15:00','TERAPIA',90,'Pendiente'),
+		(8,7,4,3,2,'2026-05-26','07:45:00','CONTROL',45,'Pendiente');     
 
 
--- Inserción de BOLETA
 INSERT INTO boleta_venta (id_cita,id_clinica,numero_boleta)
 VALUES
 		(1,1,'BV-2026-0001'),
@@ -172,7 +171,6 @@ VALUES
 		(15,2,'BV-2026-0015');
 
 
--- Inserción de DETALLE DE BOLETA
 INSERT INTO detalle_boleta (id_boleta_venta, concepto, precio_unitario, descuento, valor_venta, igv, precio_neto)
 VALUES
 		-- BOLETA 1
@@ -224,3 +222,5 @@ VALUES
 		-- BOLETA 15 (2 detalles)
 		(15,'Emergencia Cardiologica',320.00,0.00,262.40,57.60,320.00),
 		(15,'Electrocardiograma',110.00,0.00,90.20,19.80,110.00);
+
+
