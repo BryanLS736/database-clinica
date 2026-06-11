@@ -113,43 +113,43 @@ VALUES
 		('RECEP002','31586427','Andrea Milagros','Lopez Herrera','954 218 736','andrealopezherrera@ricardopalma.com'),
 		('RECEP003','79624153','Fernando Alonso','Torres Vega','978 364 125','fernandotorresvega@ricardopalma.com'),
 		('RECEP004','52874196','Paola Cristina','Castillo Rios','943 625 781','paolacastillorios@ricardopalma.com');
-        
+   
 INSERT INTO cita (id_paciente,id_medico,id_recepcionista,id_consultorio,id_especialidad,fecha,hora,tipo_cita,duracion_minutos,estado_cita)
 VALUES
-		(1,1,1,1,1,'2026-05-20','08:00:00','CONSULTA GENERAL',30,'Pendiente'),
-		(2,2,2,1,1,'2026-05-20','15:00:00','CONTROL',45,'Pendiente'),
-		(3,3,3,1,1,'2026-05-20','22:30:00','TERAPIA',90,'Pendiente'),
-		(4,4,4,2,1,'2026-05-21','09:00:00','CONSULTA GENERAL',30,'Pendiente'),
-		(5,5,1,2,1,'2026-05-21','16:00:00','CHEQUEO',45,'Pendiente'),
-		(6,6,2,2,1,'2026-05-21','23:00:00','TERAPIA',90,'Pendiente'),
+		(1,1,1,1,1,'2026-07-20','08:00:00','CONSULTA GENERAL',30,'Atendida'),
+		(2,2,2,1,1,'2026-07-20','15:00:00','CONTROL',45,'Atendida'),
+		(3,3,3,1,1,'2026-07-20','22:30:00','TERAPIA',90,'Atendida'),
+		(4,4,4,2,1,'2026-07-21','09:00:00','CONSULTA GENERAL',30,'Atendida'),
+		(5,5,1,2,1,'2026-07-21','16:00:00','CHEQUEO',45,'Atendida'),
+		(6,6,2,2,1,'2026-07-21','23:00:00','TERAPIA',90,'Atendida'),
         
-		(7,7,3,3,2,'2026-05-22','08:30:00','CONSULTA GENERAL',30,'Pendiente'),
-		(8,8,4,4,2,'2026-05-22','15:30:00','CONTROL',45,'Pendiente'),
-		(9,9,1,4,2,'2026-05-22','10:00:00','CONSULTA GENERAL',30,'Pendiente'),
-		(10,10,2,4,2,'2026-05-22','22:15:00','TERAPIA',90,'Pendiente'),
+		(7,7,3,3,2,'2026-07-22','08:30:00','CONSULTA GENERAL',30,'Atendida'),
+		(8,8,4,4,2,'2026-07-22','15:30:00','CONTROL',45,'Atendida'),
+		(9,9,1,4,2,'2026-07-22','10:00:00','CONSULTA GENERAL',30,'Atendida'),
+		(10,10,2,4,2,'2026-07-22','22:15:00','TERAPIA',90,'Atendida'),
         
-		(11,11,3,5,3,'2026-05-23','08:00:00','CONSULTA GENERAL',30,'Pendiente'),
-		(12,12,4,5,3,'2026-05-23','14:30:00','CONTROL',45,'Pendiente'),
+		(11,11,3,5,3,'2026-07-23','08:00:00','CONSULTA GENERAL',30,'Pendiente'),
+		(12,12,4,5,3,'2026-07-23','14:30:00','CONTROL',45,'Pendiente'),
         
-		(13,13,1,6,4,'2026-05-23','09:30:00','CONSULTA GENERAL',30,'Pendiente'),
-		(14,14,2,6,4,'2026-05-23','16:30:00','CHEQUEO',45,'Pendiente'),
-		(15,15,3,7,4,'2026-05-23','22:00:00','TERAPIA',90,'Pendiente'),
-		(16,16,4,7,4,'2026-05-24','07:30:00','CONSULTA GENERAL',30,'Pendiente'),
+		(13,13,1,6,4,'2026-07-23','09:30:00','CONSULTA GENERAL',30,'Pendiente'),
+		(14,14,2,6,4,'2026-07-23','16:30:00','CHEQUEO',45,'Pendiente'),
+		(15,15,3,7,4,'2026-07-23','22:00:00','TERAPIA',90,'Pendiente'),
+		(16,16,4,7,4,'2026-07-24','07:30:00','CONSULTA GENERAL',30,'Pendiente'),
         
-		(17,17,1,8,5,'2026-05-24','15:00:00','CONTROL',45,'Pendiente'),
-		(18,18,2,8,5,'2026-05-24','08:45:00','CONTROL',45,'Pendiente'),
+		(17,17,1,8,5,'2026-07-24','15:00:00','CONTROL',45,'Pendiente'),
+		(18,18,2,8,5,'2026-07-24','08:45:00','CONTROL',45,'Pendiente'),
         
-		(19,19,3,9,6,'2026-05-24','10:15:00','CONSULTA GENERAL',30,'Pendiente'),
-		(20,20,4,9,6,'2026-05-24','17:00:00','CONSULTA GENERAL',30,'Pendiente'),
-		(1,21,1,9,6,'2026-05-25','23:30:00','CHEQUEO',45,'Pendiente'),
+		(19,19,3,9,6,'2026-07-24','10:15:00','CONSULTA GENERAL',30,'Pendiente'),
+		(20,20,4,9,6,'2026-07-24','17:00:00','CONSULTA GENERAL',30,'Pendiente'),
+		(1,21,1,9,6,'2026-07-25','23:30:00','CHEQUEO',45,'Pendiente'),
         
-		(2,1,2,10,1,'2026-05-25','06:30:00','CONSULTA GENERAL',30,'Pendiente'),
-		(3,2,3,10,1,'2026-05-25','15:30:00','CONTROL',45,'Pendiente'),
-		(4,3,4,10,1,'2026-05-25','22:45:00','TERAPIA',90,'Pendiente'),
-		(5,4,1,11,1,'2026-05-26','09:15:00','CONSULTA GENERAL',30,'Pendiente'),
-		(6,5,2,11,1,'2026-05-26','16:15:00','CONSULTA GENERAL',30,'Pendiente'),
-		(7,6,3,1,1,'2026-05-26','23:15:00','TERAPIA',90,'Pendiente'),
-		(8,7,4,3,2,'2026-05-26','07:45:00','CONTROL',45,'Pendiente');     
+		(2,1,2,10,1,'2026-08-01','06:30:00','CONSULTA GENERAL',30,'Pendiente'),
+		(3,2,3,10,1,'2026-08-01','15:30:00','CONTROL',45,'Pendiente'),
+		(4,3,4,10,1,'2026-08-02','22:45:00','TERAPIA',90,'Pendiente'),
+		(5,4,1,11,1,'2026-08-03','09:15:00','CONSULTA GENERAL',30,'Pendiente'),
+		(6,5,2,11,1,'2026-08-04','16:15:00','CONSULTA GENERAL',30,'Pendiente'),
+		(7,6,3,1,1,'2026-08-05','23:15:00','TERAPIA',90,'Cancelada'),
+		(8,7,4,3,2,'2026-08-06','07:45:00','CONTROL',45,'Cancelada');     
 
 
 INSERT INTO boleta_venta (id_cita,id_clinica,numero_boleta)
@@ -222,5 +222,3 @@ VALUES
 		-- BOLETA 15 (2 detalles)
 		(15,'Emergencia Cardiologica',320.00,0.00,262.40,57.60,320.00),
 		(15,'Electrocardiograma',110.00,0.00,90.20,19.80,110.00);
-
-
