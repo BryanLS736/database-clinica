@@ -6,11 +6,11 @@ Grupo 7 del curso de Base de Datos I.
 ## Avances Cumplidos
 - [X] Avance 1
 - [X] Avance 2
-- [ ] Avance 3
+- [X] Avance 3
     - [X] Aplicacion de comandos de la semana 11
     - [X] Aplicacion de comandos de la semana 12
     - [X] Aplicacion de comandos de la semana 13
-    - [ ] Word con los comandos y OUTPUTS de las consultas
+    - [X] Word con los comandos y OUTPUTS de las consultas
 - [ ] Avance Final
 
 ## Explicación de las subcarpetas de la carpeta database
@@ -40,6 +40,12 @@ Grupo 7 del curso de Base de Datos I.
 
 ### Actualización 4 (25/06/2026)
 - Se agregó el ejercicio de cursores.
+
+### Actualización 5 (28/06/2026)
+- Se agregó el ejercicio de funciones.
+- Se agregó el ejercicio de procedimientos almacenados.
+- Se agregó el ejercicio de condicional IF.
+- Se hizo el word del proyecto (contiene el codigo sql para copiar y pegar, además de los resultados).
 
 ## Tecnologías
 
