@@ -1,5 +1,7 @@
 /---- IF ELSE ---/
 
+DROP PROCEDURE IF EXISTS verificar_paciente_registrado;
+
 -- Si queremos saber si un paciente ya está registrado en la base de datos
 DELIMITER //
 CREATE PROCEDURE verificar_paciente_registrado(IN p_dni INT)

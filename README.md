@@ -9,7 +9,7 @@ Grupo 7 del curso de Base de Datos I.
 - [ ] Avance 3
     - [X] Aplicacion de comandos de la semana 11
     - [X] Aplicacion de comandos de la semana 12
-    - [ ] Aplicacion de comandos de la semana 13
+    - [X] Aplicacion de comandos de la semana 13
     - [ ] Word con los comandos y OUTPUTS de las consultas
 - [ ] Avance Final
 
