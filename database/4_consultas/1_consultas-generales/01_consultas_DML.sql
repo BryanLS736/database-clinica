@@ -1,4 +1,3 @@
-
 /*-------------COMANDO DML (SELECT, UPDATE, DELETE)----------*/
 
 -- SELECCIONAR todos los pacientes registrados
@@ -15,6 +14,7 @@ UPDATE paciente
 SET direccion_cliente = 'Av. Los Olivos 456', telefono = '948 265 128'
 WHERE codigo_paciente = 'PAC001';
 
+-- Demostración
 SELECT *
 FROM paciente
 WHERE codigo_paciente = 'PAC001';
@@ -24,11 +24,23 @@ UPDATE medico
 SET turno = 'Tarde', hora_inicio = '14:00:00', hora_fin = '22:00:00'
 WHERE dni = '41396825';
 
+-- Demostración
+SELECT *
+FROM medico
+WHERE dni = '41396825';
 
 -- ELIMINAR un especialidad por su NOMBRE
 DELETE FROM especialidad
 WHERE nombre_especialidad = 'TRAUMATOLOGIA';
 
+-- Demostración
+SELECT * FROM especialidad
+WHERE nombre_especialidad = 'TRAUMATOLOGIA';
+
 -- ELIMINAR un médico por su CÓDIGO
 DELETE FROM medico
+WHERE codigo_medico = 'MED023';
+
+-- Demostración
+SELECT * FROM medico
 WHERE codigo_medico = 'MED023';

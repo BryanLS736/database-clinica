@@ -1,4 +1,3 @@
-
 /*-------------COMANDO DML (INSERT)----------*/
 
 INSERT INTO paciente (codigo_paciente, dni, nombres, apellidos, tipo_sangre, fecha_nacimiento, genero_nacimiento, direccion_cliente, telefono)

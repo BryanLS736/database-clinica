@@ -5,7 +5,6 @@ CREATE DATABASE clinica_db;
 
 USE clinica_db;
 
-
 CREATE TABLE paciente (
 	id_paciente INT AUTO_INCREMENT PRIMARY KEY,
 	codigo_paciente VARCHAR(25) UNIQUE NOT NULL,
@@ -139,6 +138,17 @@ CREATE TABLE detalle_boleta (
 	precio_neto DECIMAL(10,2) NOT NULL ,
 	
 	FOREIGN KEY (id_boleta_venta) REFERENCES boleta_venta (id_boleta_venta)
+);
+
+-- Creación de la tabla de auditoria para cita (tabla que se usará para el trigger)
+CREATE TABLE auditoria_cita(
+	id_auditoria INT AUTO_INCREMENT PRIMARY KEY,
+    id_cita INT NOT NULL,
+    accion ENUM('INSER','UPDATE','DELETE') NOT NULL,
+    estado_anterior ENUM('Pendiente','Atendida','Cancelada'),
+    estado_nuevo ENUM('Pendiente','Atendida','Cancelada'),
+    usuario_db VARCHAR(100) NOT NULL,
+    fecha_evento DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE metodo_pago (

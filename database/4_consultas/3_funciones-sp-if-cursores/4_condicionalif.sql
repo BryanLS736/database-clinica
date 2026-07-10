@@ -1,8 +1,5 @@
-/---- IF ELSE ---/
-
-DROP PROCEDURE IF EXISTS verificar_paciente_registrado;
-
 -- Si queremos saber si un paciente ya está registrado en la base de datos
+-- DROP PROCEDURE IF EXISTS verificar_paciente_registrado;
 DELIMITER //
 CREATE PROCEDURE verificar_paciente_registrado(IN p_dni INT)
 BEGIN
@@ -15,8 +12,7 @@ BEGIN
     ELSE
 		SELECT 'El paciente NO está registrado.' AS Estado;
 	END IF;
-END//
-
+END //
 DELIMITER ;
-
+-- Llamado al procedimiento almacenado que contiene una condicional IF
 CALL verificar_paciente_registrado(70491376);

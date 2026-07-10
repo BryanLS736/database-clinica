@@ -1,7 +1,7 @@
 USE clinica_db;
 
-DROP PROCEDURE IF EXISTS sp_listar_citas_pendientes;
-
+-- Cursor que trae la información del cliente, fecha de su cita y la hora
+-- DROP PROCEDURE IF EXISTS sp_listar_citas_pendientes;
 DELIMITER //
 CREATE PROCEDURE sp_listar_citas_pendientes()
 BEGIN
@@ -40,5 +40,5 @@ BEGIN
     CLOSE cur;
 END //
 DELIMITER ;
-
+-- Llamado al procedimiento almacenado que contiene un cursor
 CALL sp_listar_citas_pendientes();

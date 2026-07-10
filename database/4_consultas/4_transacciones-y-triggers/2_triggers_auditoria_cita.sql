@@ -1,19 +1,7 @@
 USE clinica_db;
 
--- Creación de la tabla de auditoria para cita
-DROP TABLE IF EXISTS auditoria_cita;
-CREATE TABLE auditoria_cita(
-	id_auditoria INT AUTO_INCREMENT PRIMARY KEY,
-    id_cita INT NOT NULL,
-    accion ENUM('INSER','UPDATE','DELETE') NOT NULL,
-    estado_anterior ENUM('Pendiente','Atendida','Cancelada'),
-    estado_nuevo ENUM('Pendiente','Atendida','Cancelada'),
-    usuario_db VARCHAR(100) NOT NULL,
-    fecha_evento DATETIME DEFAULT CURRENT_TIMESTAMP
-);
-
--- Trigger AFTER UPDATE
-DROP TRIGGER IF EXISTS trg_after_update_cita;
+-- Trigger AFTER UPDATE, que guarda los UPDATE en una tabla auditoria
+-- DROP TRIGGER IF EXISTS trg_after_update_cita;
 DELIMITER //
 CREATE TRIGGER trg_after_update_cita
 AFTER UPDATE
@@ -27,8 +15,8 @@ BEGIN
 END //
 DELIMITER ;
 
--- Trigger AFTER DELETE
-DROP TRIGGER IF EXISTS trg_after_delete_cita;
+-- Trigger AFTER DELETE, que guarda los DELETE en una tabla auditoria
+-- DROP TRIGGER IF EXISTS trg_after_delete_cita;
 DELIMITER //
 CREATE TRIGGER trg_after_delete_cita
 AFTER DELETE

@@ -1,5 +1,6 @@
 USE clinica_db;
 
+-- Funciones de cadena
 -- CONCAT(): Une nombres y apellidos para formar el nombre completo en una sola columna
 SELECT CONCAT(nombres, ' ', apellidos) AS nombre_completo
 FROM paciente;
@@ -28,6 +29,7 @@ FROM paciente;
 SELECT RTRIM(telefono) AS telefono_sin_espacios_der
 FROM recepcionista;
 
+-- Funciones de Conversion
 -- CAST(): Convierte la fecha a tipo CHAR
 SELECT id_cita, CAST(fecha AS CHAR) AS fecha_texto
 FROM cita;

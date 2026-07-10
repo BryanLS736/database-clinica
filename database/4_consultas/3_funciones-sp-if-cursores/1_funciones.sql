@@ -1,8 +1,6 @@
 -- Función para contar citas por médico
-DROP FUNCTION IF EXISTS citasPorMedico;
-
+-- DROP FUNCTION IF EXISTS citasPorMedico;
 DELIMITER //
-
 CREATE FUNCTION citasPorMedico(idMedico INT)
 RETURNS INT
 BEGIN
@@ -11,10 +9,9 @@ BEGIN
     FROM cita
     WHERE id_medico = idMedico;
     RETURN total;
-END//
-
+END //
 DELIMITER ;
 
-
+-- Uso de la función en una consulta
 SELECT nombres, apellidos, citasPorMedico(id_medico) AS total_citas
 FROM medico;

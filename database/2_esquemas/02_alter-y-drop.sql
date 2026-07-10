@@ -1,4 +1,3 @@
-
 /*-------------COMANDO DDL (ALTER, DROP)----------*/
 
 -- MODIFICAR la columna codigo_paciente de la TABLA paciente

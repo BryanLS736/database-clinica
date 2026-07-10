@@ -58,4 +58,4 @@ CREATE OR REPLACE VIEW paciente_cita_vista AS
     INNER JOIN cita c
     ON p.id_paciente = c.id_paciente;
    
-SELECT * FROM paciente_cita_vista;
+SELECT * FROM paciente_cita_vista LIMIT 10;
