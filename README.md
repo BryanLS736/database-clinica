@@ -12,6 +12,10 @@ Grupo 7 del curso de Base de Datos I.
     - [X] Aplicacion de comandos de la semana 13
     - [X] Word con los comandos y OUTPUTS de las consultas
 - [ ] Avance Final
+    - [ ] Word de la base de datos relacional
+    - [ ] Word de la base de datos NO relacional
+    - [ ] Canva del proyecto
+    - [ ] Archivo comprimido de los scripts
 
 ## Explicación de las subcarpetas de la carpeta database
 
@@ -47,7 +51,10 @@ Grupo 7 del curso de Base de Datos I.
 - Se agregó el ejercicio de condicional IF.
 - Se hizo el word del proyecto (contiene el codigo sql para copiar y pegar, además de los resultados).
 
-## Tecnologías
+### Actualización 6 (09/07/2026)
+- Se avanzó el word de la base de datos relacional un 70%
+- Se crearon nuevos scripts
 
+## Tecnologías
 - MySQL
 - Workbench
