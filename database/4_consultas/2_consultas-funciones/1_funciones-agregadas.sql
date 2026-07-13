@@ -13,12 +13,12 @@ SELECT AVG(precio_unitario) AS precio_promedio
 FROM detalle_boleta;
 -- Devuelve el precio promedio de los servicios registrados.
 
--- MAX(): Devuelve el valor máximo de una columna.
-SELECT MAX(precio_neto) AS mayor_venta
-FROM detalle_boleta;
--- Devuelve la venta con el precio neto más alto
-
 -- MIN(): Devuelve el valor mínimo de una columna.
 SELECT MIN(descuento) AS menor_descuento
 FROM detalle_boleta;
 -- Devuelve el descuento más bajo registrado, si no hay descuento es 0
+
+-- MAX(): Devuelve el valor máximo de una columna.
+SELECT MAX(precio_neto) AS mayor_venta
+FROM detalle_boleta;
+-- Devuelve la venta con el precio neto más alto

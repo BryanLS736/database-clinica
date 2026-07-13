@@ -4,6 +4,7 @@
 
 -- 7.4.1. INNER JOIN
 -- Se van a mostrar registros que tengan coincidencias de ambas tablas
+-- Muestra a todos los médicos junto con la especialidad que tiene cada uno.
 SELECT m.codigo_medico, CONCAT(m.nombres, " ", m.apellidos) AS nombre_completo, e.nombre_especialidad
 FROM medico m
 INNER JOIN medico_especialidad me
