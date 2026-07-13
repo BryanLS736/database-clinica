@@ -22,3 +22,16 @@ FROM detalle_boleta;
 SELECT MAX(precio_neto) AS mayor_venta
 FROM detalle_boleta;
 -- Devuelve la venta con el precio neto más alto
+
+-- GROUP BY
+-- AGRUPAR las citas por estado y contar cuántas existen en cada uno
+SELECT estado_cita, COUNT(*) AS total_citas
+FROM cita
+GROUP BY estado_cita;
+
+-- GROUP BY + HAVING
+-- MOSTRAR solo los estados que tengan más de 5 citas registradas
+SELECT estado_cita, COUNT(*) AS total_citas
+FROM cita
+GROUP BY estado_cita
+HAVING COUNT(*) > 5;

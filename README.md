@@ -12,8 +12,8 @@ Grupo 7 del curso de Base de Datos I.
     - [X] Aplicacion de comandos de la semana 13
     - [X] Word con los comandos y OUTPUTS de las consultas
 - [ ] Avance Final
-    - [ ] Word de la base de datos relacional
-    - [ ] Word de la base de datos NO relacional
+    - [X] Word de la base de datos relacional
+    - [X] Word de la base de datos NO relacional
     - [ ] Canva del proyecto
     - [ ] Archivo comprimido de los scripts
 
@@ -54,6 +54,11 @@ Grupo 7 del curso de Base de Datos I.
 ### Actualización 6 (09/07/2026)
 - Se avanzó el word de la base de datos relacional un 70%
 - Se crearon nuevos scripts
+
+### Actualización 7 (13/07/2026)
+- Se terminó el word de la bd relacional al 100%
+- Se terminó el word de la bd NO relacional al 100%
+- Se organizó de mejor forma los scripts (siguen ahora el orden de los indices del documento del proyecto final).
 
 ## Tecnologías
 - MySQL
